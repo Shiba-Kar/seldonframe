@@ -81,8 +81,8 @@ services:
       PORT: "8080"
 
       # Add your application/LLM variables here
-      # OPENAI_API_KEY: ${OPENAI_API_KEY}
-      # ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY}
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY}
 
     expose:
       - "8080"

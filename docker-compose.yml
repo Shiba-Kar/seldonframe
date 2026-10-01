@@ -77,9 +77,9 @@ services:
       NEON_LOCAL_HOST: neon-proxy
       NEON_LOCAL_PORT: "4444"
       NEXT_PUBLIC_APP_URL: http://localhost:3000
-      PORT: "3000"
+      PORT: "8080"
     ports:
-      - "3000:3000"
+      - 8080
     depends_on:
       neon-proxy:
         condition: service_started

@@ -35,7 +35,7 @@ RUN pnpm --filter @seldonframe/crm build
 # ---------- runner ----------
 FROM node:22-bookworm-slim AS runner
 ENV NODE_ENV=production PNPM_HOME=/pnpm PATH=/pnpm:$PATH \
-    NEXT_TELEMETRY_DISABLED=1 PORT=2222
+    NEXT_TELEMETRY_DISABLED=1 PORT=3000
 RUN corepack enable
 WORKDIR /app
 
@@ -46,6 +46,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends curl tini postg
 
 COPY --from=builder /app ./
 
-EXPOSE 2222
+EXPOSE 3000
 ENTRYPOINT ["/usr/bin/tini", "--"]
 CMD ["pnpm", "--filter", "@seldonframe/crm", "start"]

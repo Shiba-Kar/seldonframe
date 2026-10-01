@@ -76,7 +76,7 @@ services:
       DATABASE_URL: postgres://seldon:seldon@postgres:5432/seldonframe
       NEON_LOCAL_HOST: neon-proxy
       NEON_LOCAL_PORT: "4444"
-      NEXT_PUBLIC_APP_URL: http://localhost:3000
+      NEXT_PUBLIC_APP_URL: http://localhost:2222
       PORT: "2222"
     ports:
       - "2222:2222"

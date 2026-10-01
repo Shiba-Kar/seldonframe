@@ -86,7 +86,7 @@ services:
       migrate:
         condition: service_completed_successfully
     healthcheck:
-      test: ["CMD-SHELL", "curl -fsS http://localhost:3000/api/version || exit 1"]
+      test: ["CMD-SHELL", "curl -fsS http://localhost:2222/api/version || exit 1"]
       interval: 15s
       timeout: 5s
       retries: 10
